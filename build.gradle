@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        maven { url 'https://repo.spring.io/release' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.hibernate:hibernate-gradle-plugin:5.3.27.Final"
+    }
+}
+
+group 'com.IoT'
+version '1.0-SNAPSHOT'
+allprojects {
+    repositories {
+        maven { url 'https://repo.spring.io/release' }
+        mavenCentral()
+    }
+    apply plugin: "java"
+}
+
+
+
+
+
+test {
+    useJUnitPlatform()
+}
