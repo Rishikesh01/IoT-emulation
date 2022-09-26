@@ -24,6 +24,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
+    //mqtt spring integration
+    implementation "org.springframework.integration:spring-integration-mqtt:5.5.15"
+
+    //time series database
+    implementation 'org.influxdb:influxdb-java:2.23'
 }
 
 tasks.named('test') {
