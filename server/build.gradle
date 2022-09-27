@@ -28,7 +28,8 @@ dependencies {
     implementation "org.springframework.integration:spring-integration-mqtt:5.5.15"
 
     //time series database
-    implementation 'org.influxdb:influxdb-java:2.23'
+    implementation 'com.influxdb:influxdb-client-java:6.5.0'
+
 }
 
 tasks.named('test') {

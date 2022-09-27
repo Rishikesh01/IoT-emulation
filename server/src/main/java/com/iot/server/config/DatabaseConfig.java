@@ -1,7 +1,7 @@
 package com.iot.server.config;
 
-import org.influxdb.InfluxDB;
-import org.influxdb.InfluxDBFactory;
+import com.influxdb.client.InfluxDBClient;
+import com.influxdb.client.InfluxDBClientFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,15 +12,16 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class DatabaseConfig {
-    @Value("${db.databaseURL}")
+    @Value("${db.url}")
     public String databaseURL;
     @Value("${db.userName}")
     public String userName;
-    @Value("${db.password")
+    @Value("${db.password}")
     private String password;
+
     @Bean
-    public InfluxDB connection(){
-        return InfluxDBFactory.connect(databaseURL, userName, password);
+    public InfluxDBClient connection() {
+        return InfluxDBClientFactory.create(databaseURL, userName, password.toCharArray());
     }
 
 }

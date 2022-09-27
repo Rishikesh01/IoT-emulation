@@ -21,7 +21,7 @@ import org.springframework.messaging.MessageChannel;
 @Configuration
 public class MqttConfig {
     @Bean
-    public MqttPahoClientFactory clientFactory(@Value("mqtt.broker.url") String url) {
+    public MqttPahoClientFactory clientFactory(@Value("${mqtt.broker.url}") String url) {
         var factory = new DefaultMqttPahoClientFactory();
         var options = new MqttConnectOptions();
         options.setServerURIs(new String[]{url});

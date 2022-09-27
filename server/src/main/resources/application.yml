@@ -3,3 +3,9 @@ mqtt:
     url: tcp://localhost:1883
     subscribe: iotmessage
     produce: iotcommand
+
+db:
+  url: http://localhost:8086
+  userName: boris
+  password: 31038988
+  
