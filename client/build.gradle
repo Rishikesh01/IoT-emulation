@@ -23,6 +23,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
+//mqtt
+    implementation "org.springframework.integration:spring-integration-mqtt:5.5.15"
+//apache collections
+    implementation 'org.apache.commons:commons-collections4:4.4'
 }
 
 tasks.named('test') {

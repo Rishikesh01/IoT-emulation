@@ -1,0 +1,5 @@
+mqtt:
+  broker:
+    url: tcp://localhost:1883
+    subscribe:  iotcommand
+    produce: iotmessage

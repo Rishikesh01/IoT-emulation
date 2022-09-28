@@ -6,6 +6,5 @@ mqtt:
 
 db:
   url: http://localhost:8086
-  userName: boris
-  password: 31038988
+  token: mXgveOzEYOuSiN0fAy29EM2sqZccAI9bd9ADD4ptZvTFD2mi6GJZkG3L1E42DfQB6qUWp-LWSaNprNNWUWtfUw==
   
